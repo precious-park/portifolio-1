@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifolio</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,10 +18,10 @@
             <a href="" class="active">Home</a>
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
-            <a href="">Portifolio</a>
-            <a href="">Contact</a>
+            <a href="portifolio.html">Portifolio</a>
+            <a href="contact.html">Contact</a>
         </nav>
-        <div class="bx bx-moon" id="darkmode-icon"></div>
+        <div class="bx bx-moon" id="theme-toggle"></div>
     </header>
 
     <!----home design design-->
@@ -28,9 +31,13 @@
             <h1>Akampurira Precious</h1>
             <p>I am an aspiring frontend developer</p>
             <div class="social-media">
-                <a href=""><i class='bx bxl-instagram'></i></a>
-                <a href=""><i class='bx bxl-tiktok'></i></a>
-                <a href=""><i class='bx bxl-telegram'></i></a>
+                <ul class="social-media">
+                    <li><a href="https://www.tiktok.com/precious_park0" target="blank"><i class="fab fa-tiktok"></i></a></li>
+                    <li><a href="https://www.telegram.com/precious_park16" target="blank"><i class="fab fa-telegram"></i></a></li>
+                    <li><a href="https://www.instagram.com/prec.iousflower1" target="blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.github.com/in/precious-park" target="blank"><i class="fab fa-github"></i></a></li>
+                    <!-- Add more social media handles as needed -->
+                  </ul>
             </div>
 
             <a href="" class="btn">Download CV</a>
@@ -97,7 +104,7 @@
                 <div class="portifolio-layer">
                     <h4>Web Development</h4>
                     <p>Simple School Website</p>
-                    <a href="file:///C:/Users/Miss%20Gracious/Documents/GitHub/website-1/school%20website%202/index.html"><i class='bx bx-link-external'></i></a>
+                    <a href="file:///C:/Users/Miss%20Gracious/Documents/GitHub/website-1/school%20website%202/index.html" target="blank"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
             <div class="portifolio-box">
@@ -105,11 +112,31 @@
                 <div class="portifolio-layer">
                     <h4>Web Development</h4>
                     <p>Simple Registration Forms</p>
-                    <a href="file:///C:/Users/Miss%20Gracious/Desktop/MY%20HTML%20PROJECTS/registration%20forms/form%20two.html"><i class='bx bx-link-external'></i></a>
+                    <a href="file:///C:/Users/Miss%20Gracious/Desktop/MY%20HTML%20PROJECTS/registration%20forms/form%20two.html" target="blank"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
         </div>
     </section>
+    <!-- contact section design -->
+<section id="contact">
+    <h2 class="heading">Contact <span>Me</span></h2>
+    <form id="contact-form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </section>
+  
 
     <!--javascript section-->
     <script src="script.js"></script>

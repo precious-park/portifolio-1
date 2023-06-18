@@ -17,6 +17,7 @@
 }
 html{
     font-size: 62.5%;
+    
 
 }
 body{
@@ -39,6 +40,7 @@ body{
     transition: .5s;
 }
 .header.sticky{
+    color: #111;
     background: var(--bg-color);
     box-shadow: 0.1rem 1rem var(--shadow-color);
 }
@@ -53,13 +55,13 @@ body{
 .navbar a{
     position: relative;
     font-size: 2.7rem;
-    color: var(--white-color);
+    color: var(--text-color);
     font-weight: 500;
     margin-right: 3.5rem;
 
 }
 .header.sticky.navbar a{
-    color: var(--text-color);
+    color: var(--white-color);
 }
 .header.sticky .navbar a.active{
     color: var(--main-color);
@@ -79,14 +81,60 @@ body{
     background: var(--main-color);
     opacity: .7;
 }
-#darkmode-icon{
+body {
+    background-color: #fff; /* Light mode background color */
+    color: #000; /* Light mode text color */
+  }
+  
+  #theme-toggle {
+    background: #000; /* Dark mode background color */
+     
+    font-size: large;
+    /* Dark mode text color */
+  }
+  
+  .dark-mode header {
+    background-color: #000;
+    color: #fff;
+  }
+  .dark-mode header div{
+      color: #fff;
+  }
+  
+  .dark-mode button {
+    background-color: #666;
+  }
+  
+  .dark-mode section {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .dark-mode .project {
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  }
+  
+  .dark-mode footer {
+    background-color: #000;
+  }
+  
+/*original----*/
+#theme-toggle{
     font-size: 2.4rem;
     color: var(--white-color);
     cursor: pointer;
 }
-.header.sticky #darkmode-icon{
-    color: var(--text-color);
-    opacity: .9;
+.header.sticky{
+    background-color: #111;
+}
+.header.sticky .navbar a{
+    color: #fff;
+}
+.header.sticky #theme-toggle{
+    color: #fff;
+    
+    
 }
 
 /*--------home section design------*/
@@ -114,25 +162,37 @@ section{
 .home-content p{
     font-size: 1.6rem;
 }
-.home-content .social-media{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background: transparent;
-    border: .2rem solid var(--main-color);
+.social-media {
+    list-style: none;
+    padding: 0;
+    margin-top: 1em;
+  }
+
+  .social-media li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .social-media a {
+    display: inline-block;
+    width: 30px;
+    font-size: 25px;
+    height: 30px;
+    background-color:var(--main-color);
+    color: #000;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    border: .2rem solid transparent;
     border-radius: 50%;
-    box-shadow: 0 .2rem .5rem var(--shadow-color);
-    font-size: 2rem;
-    color: var(--main-color);
-    margin: 2.5rem 1.5rem 3rem 0;
     transition: .5s ease;
-}
-.home-content .social-media a:hover{
-    background: var(--main-color);
-    color: var(--white-color);
-}
+  }
+  .social-media a:hover{
+      background: transparent;
+      color: var(--main-color);
+      border-color: var(--main-color);
+  }
+
 .btn{
     display: inline-block;
     padding: 1.2rem 2.8rem;
@@ -145,6 +205,7 @@ section{
     letter-spacing: .1rem;
     font-weight: 600;
     transition: .5s ease;
+    margin-top: 2em;
 }
 .btn:hover{
     background: transparent;
@@ -296,6 +357,7 @@ span{
     color: var(--main-color);
 }
 .services-box h3{
+    color: var(--text-color);
     font-size: 2.6rem;
     transition: .5s ease;
 }
@@ -303,6 +365,7 @@ span{
     color: var(--main-color);
 }
 .services-box p{
+    color: var(--text-color);
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
 }
@@ -382,3 +445,77 @@ span{
 .portifolio-box:hover img{
     transform: scale(1.1);
 }
+/*-----contact me sction design---*/
+
+#contact {
+    text-align: center;
+    margin-top: 9em;
+    
+  }
+  
+  #contact h2 {
+    font-size: 8em;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    font-size: 5em;
+  }
+  
+  label {
+    display: block;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-top: .6rem solid var(--main-color);
+    border-bottom: .6rem solid var(--main-color);
+    border-radius: 18px;
+  }
+  
+  /*button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }*/
+  
+/*--------media queries------*/
+/*--mobile devices--*/
+@media screen and (max-width:767px) {
+    header{
+        font-size: 25%;
+    }
+    section{
+        font-size: 35%;
+    }
+}
+    /*--tablet and small desktops---*/
+    @media screen and (min-width:768px) and (max-width:991px){
+        header{
+            font-size: 45%;
+        }
+        section{
+            font-size: 65%;
+        }
+    }
+        /*--medium-sized and large desktops screens--*/
+        @media screen and (min-width:992px){
+            header{
+                font-size: 85%;
+            }
+            section{
+                font-size: 120%;
+            }
+        }    
+    
+
+
