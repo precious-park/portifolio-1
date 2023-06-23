@@ -11,6 +11,16 @@ const body = document.body;
 themeToggle.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
 });
+
+//menu icon 
+let menuIcon = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".navbar");
+
+menuIcon.onclick = () => {
+  menuIcon.classList.toggle("bx-x");
+  navbar.classList.toggle("active");
+};
+
 /*----contact me functionality--*/
 // JavaScript
 document.getElementById("contact-form").addEventListener("submit", function(event) {

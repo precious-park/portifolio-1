@@ -125,6 +125,12 @@ body {
     color: var(--white-color);
     cursor: pointer;
 }
+#menu-icon{
+    font-size: 2.4rem;
+    color: var(--white-color);
+    cursor: pointer;
+    margin-left: 2em;
+}
 .header.sticky{
     background-color: #111;
 }
@@ -133,7 +139,6 @@ body {
 }
 .header.sticky #theme-toggle{
     color: #fff;
-    
     
 }
 
@@ -491,12 +496,45 @@ span{
 /*--------media queries------*/
 /*--mobile devices--*/
 @media screen and (max-width:767px) {
-    header{
-        font-size: 25%;
+    #menu-icon{
+        display: block;
+        
     }
-    section{
-        font-size: 35%;
+    #theme-toggle{
+        position: absolute;
+        right: 7rem;
+        font-size: 2.6rem;
+        color: var(--text-color);
+        margin-bottom: .1rem;
     }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+        display: none;
+    }
+    .navbar .active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: var(--text-color);
+    }
+    .navbar a:nth-child(1),
+    .navbar a:nth-child(2){
+        color: var(--text-color);
+    }
+    .navbar a.active{
+        color: var(--main-color);
+    }
+
 }
     /*--tablet and small desktops---*/
     @media screen and (min-width:768px) and (max-width:991px){
